@@ -1,0 +1,28 @@
+<section class="section" id="about">
+        <div class="container">
+            <div class="row justify-content-between">
+                {% for about in about_us %}
+                    <div class="col-md-6 pr-md-5 mb-4 mb-md-0">
+                        <h6 class="section-title mb-0">{{ about.title }}</h6>
+                        <h6 class="section-subtitle mb-4">{{ about.subtitle }}</h6>
+                        <p>{{ about.fst_descriptions }}</p>
+                        <img src={{ about.lg_image.url }} alt="" class="w-100 mt-3 shadow-sm">
+                    </div>
+                    <div class="col-md-6 pl-md-5">
+
+                        <div class="row">
+                            <div class="col-6">
+                                <img src={{ about.sm_image1.url}} alt="" class="w-100 shadow-sm">
+                            </div>
+                            <div class="col-6">
+                                <img src={{ about.sm_image2.url }} alt="" class="w-100 shadow-sm">
+                            </div>
+                            <div class="col-12 mt-4">
+                                <p>{{ about.lst_descriptions }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>

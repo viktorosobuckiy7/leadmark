@@ -1,0 +1,20 @@
+<section  id="service" class="section pt-0">
+        <div class="container">
+            <h6 class="section-title text-center">Our Service</h6>
+            <h6 class="section-subtitle text-center mb-5 pb-3">Voluptates architecto provident deserunt.</h6>
+
+            <div class="row">
+                {% for service in services  %}
+                        <div class="col-md-4">
+                            <div class="card mb-4 mb-md-0">
+                                <div class="card-body">
+                                    <small class="text-primary font-weight-bold">{{ service.position }}</small>
+                                    <h5 class="card-title mt-3"> {{ service.name }} </h5>
+                                    <p class="mb-0">{{ service.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>

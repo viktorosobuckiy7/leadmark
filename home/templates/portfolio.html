@@ -1,0 +1,31 @@
+<section id="portfolio" class="section portfolio-section">
+        <div class="container">
+            <h6 class="section-title text-center">Our Portfolio</h6>
+            <h6 class="section-subtitle mb-5 text-center">New stunning projects for our amazing clients</h6>
+            <div class="filters">
+                <a href="#" data-filter=".new" class="active">
+                    New
+                {% for service in services %}
+                        <a href="#" data-filter=".{{ service.name }}">
+                            {{ service.name }}
+                        </a>
+                {% endfor %}
+            </div>
+            <div class="portfolio-container">
+                {% for portfolio in portfolios %}
+                <div class="col-md-6 col-lg-4 web new">
+                    <div class="portfolio-item">
+                        <img src={{ portfolio.photo.url }} class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                        <div class="content-holder">
+                            <a class="img-popup" href="{{ portfolio.photo.url }}"></a>
+                            <div class="text-holder {{ portfolio.service.name }} ">
+                                <h6 class="title" filter-service >{{ portfolio.service }}</h6>
+                                <p class="subtitle">{{ portfolio.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
